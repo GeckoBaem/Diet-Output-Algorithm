@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식단 생성 알고리즘</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+        #userInfoForm {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #alleriesForm {
+            padding-left: 7%;
+            padding-right: 7%;
+            margin: 3%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kcalForm {
+            padding-left: 7%;
+            padding-right: 7%;
+            margin: 3%;
+            display: flex;
+            flex-direction: column;
+        }
+        #result {
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+    <script src="./main.js"></script>
+    <h1>식단 생성 알고리즘</h1>
+    <div id="userInfoForm">
+        <div id="alleriesForm">
+            <h2>알레르기</h2>
+            <div>
+                <input type="checkbox" name="allergy" value="우유">
+                <label for="allergy">우유</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="달걀">
+                <label for="allergy">달걀</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="밀">
+                <label for="allergy">밀</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="콩">
+                <label for="allergy">콩</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="견과류">
+                <label for="allergy">견과류</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="생선">
+                <label for="allergy">생선</label>
+            </div>
+            <div>
+                <input type="checkbox" name="allergy" value="갑각류">
+                <label for="allergy">갑각류</label>
+            </div>
+        </div>
+        <div id="kcalForm">
+            <h2>하루 섭취 칼로리</h2>
+            <input type="number" name="kcal" id="kcal" value="2000">
+        </div>
+    </div>
+    <button onclick="inputValueConfirm()"><b>식단 생성!</b></button>
+    <br>
+    <div id="result"></div>
+</body>
+</html>
